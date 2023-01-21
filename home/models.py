@@ -17,6 +17,7 @@ class BlogModel(models.Model):
     image = models.ImageField(upload_to='uploads/froala_editer/images')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField('Approved',default=False)
 
     def __str__(self):
         return self.title

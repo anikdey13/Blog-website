@@ -20,7 +20,10 @@
     <div class="container">
       <div class="row mb-5">
         <!-- blog item-->
+        
+
         {% for blog in blogs %}
+        {% if blog.approved %}
         <div class="col-lg-4 col-sm-6 mb-4 hover-animate">
           <div class="card shadow border-0 h-100">
             <a href="{% url 'blog_detail' blog.slug %}">
@@ -39,6 +42,8 @@
             </div>
           </div>
         </div>
+        {% endif %}
+
         {% endfor %}
       
       
